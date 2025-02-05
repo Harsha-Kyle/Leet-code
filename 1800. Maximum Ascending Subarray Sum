@@ -1,0 +1,13 @@
+class Solution(object):
+    def maxAscendingSum(self, nums):
+        l,l1=[],[nums[0]]
+        for i in nums:
+            if l1[-1]<i:
+                l1.append(i)
+            else:
+                if sum(l)<sum(l1):
+                    l=l1
+                l1=[i]
+        if sum(l)<sum(l1):
+            l=l1
+        return sum(l)
