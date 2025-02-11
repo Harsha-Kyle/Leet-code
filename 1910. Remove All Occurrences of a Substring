@@ -1,0 +1,7 @@
+class Solution(object):
+    def removeOccurrences(self, s, part):
+        while part in s:
+            a=s.find(part)
+            s=s[:a]+s[a+len(part):]
+        return s
+        
