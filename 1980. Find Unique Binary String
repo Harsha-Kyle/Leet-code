@@ -1,0 +1,11 @@
+class Solution(object):
+    def findDifferentBinaryString(self, nums):
+        n=len(nums[0])
+        for i in range(100):
+            a=bin(i)
+            s=a[2:]
+            c=n-len(s)
+            for i in range(c):
+                s="0"+s
+            if s not in nums:
+                return s
