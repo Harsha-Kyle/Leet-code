@@ -1,0 +1,14 @@
+class Solution(object):
+    def applyOperations(self, nums):
+        l,l1=[],[]
+        for i in range (len(nums)-1):
+            if nums[i]==0:
+                l1.append(0)
+            elif nums[i]==nums[i+1]:
+                l.append(nums[i]*2)
+                nums[i+1]=0
+            else:
+                l.append(nums[i])
+        return l+[nums[-1]]+l1
+
+        
