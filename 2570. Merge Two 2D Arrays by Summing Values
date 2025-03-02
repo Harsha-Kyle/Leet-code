@@ -1,0 +1,12 @@
+class Solution(object):
+    def mergeArrays(self, nums1, nums2):
+        l,l1=nums1+nums2,[]
+        d={}
+        for i in l:
+            if i[0] in d:
+                d[i[0]]=d[i[0]]+i[1]
+            else:
+                d[i[0]]=i[1]
+        for i in sorted(d):
+            l1.append([i,d[i]])
+        return l1
