@@ -1,0 +1,12 @@
+class Solution(object):
+    def pivotArray(self, nums, pivot):
+        l,r,p=[],[],[]
+        for i in nums:
+            if i==pivot:
+                p.append(i)
+            elif i<pivot:
+                l.append(i)
+            else:
+                r.append(i)
+        return l+p+r
+        
