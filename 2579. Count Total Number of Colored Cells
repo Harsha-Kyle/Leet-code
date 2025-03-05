@@ -1,0 +1,11 @@
+class Solution(object):
+    def coloredCells(self, n):
+        s=(n*2)-1
+        j=1
+        for i in range(1,n):
+            s+=j*2
+            j+=2
+        return s
+        
+
+        
