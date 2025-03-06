@@ -1,0 +1,13 @@
+class Solution(object):
+    def findMissingAndRepeatedValues(self, grid):
+        l,l1=[],[]
+        for i in range(len(grid)):
+            for j in range(len(grid)):
+                if grid[i][j] not in l:
+                    l.append(grid[i][j])
+                else:
+                    if grid[i][j] not in l1:
+                        l1.append(grid[i][j])
+…
+
+        
