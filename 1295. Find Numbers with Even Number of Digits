@@ -1,0 +1,17 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int s=0;
+        for(int i :nums){
+            int n=i,l=0,m;
+            while(n>0){
+                m=n%10;
+                l++;
+                n=n/10;
+            }
+            if(l%2==0){
+                s++;
+            }
+        }
+        return s;
+    }
+}
