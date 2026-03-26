@@ -1,0 +1,17 @@
+class Solution {
+    public int numberOfSteps(int num) {
+        int c=0,n=num;
+        while(n>0){
+            if(n%2==0){
+                n/=2;
+                c++;
+            }
+            else{
+                n--;
+                c++;
+            }
+        }
+        return c;
+        
+    }
+}
