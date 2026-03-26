@@ -1,0 +1,10 @@
+class Solution {
+    public String truncateSentence(String s, int k) {
+        String s1="";
+        String a[]= s.split(" ");
+        for(int i =0;i<k;i++){
+            s1+= a[i]+" ";
+        }
+        return s1.trim();
+    }
+}
